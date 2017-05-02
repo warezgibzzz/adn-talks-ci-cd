@@ -1,6 +1,6 @@
 {
   "name": "right-in-your-face-why-you-need-to-use-ci-cd",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "grunt": "^1.0.0",

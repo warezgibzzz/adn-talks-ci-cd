@@ -7,6 +7,7 @@ module.exports = (grunt) ->
         manifest:
             generate:
                 options:
+                    headcomment: " <%= pkg.name %> v<%= pkg.version %>"
                     basePath: 'dist'
                     cache: [
                       'css/theme.css'
@@ -42,6 +43,7 @@ module.exports = (grunt) ->
                     'dist/css/*.css'
                     'dist/resources/*.css'
                     'dist/slides/*'
+                    'dist/bower_components/**/*'
                 ]
                 dest: 'dist/manifest.appcache'
 
