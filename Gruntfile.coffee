@@ -9,11 +9,27 @@ module.exports = (grunt) ->
                 options:
                     basePath: 'dist'
                     cache: [
-                        'index.html'
-                        'slides/*'
-                        'js/*.js'
-                        'css/*.css'
-                        'resources/**'
+                      'css/theme.css'
+                      'js/loadhtmlslides.js'
+                      'bower_components/reveal.js/lib/js/head.min.js'
+                      'bower_components/reveal.js/js/reveal.js'
+                      'bower_components/reveal.js/plugin/highlight/highlight.js'
+                      'bower_components/reveal.js/plugin/zoom-js/zoom.js'
+                      'bower_components/reveal.js/plugin/notes/notes.js'
+                      'bower_components/reveal.js/css/reveal.css'
+                      'bower_components/reveal.js/css/print/paper.css'
+                      'bower_components/reveal.js/highlight/styles/solarized_dark.js'
+                      'slides/ci-cd-history.html'
+                      'slides/how-bad-that-is-for-developer.html'
+                      'slides/how-it-helps-client.html'
+                      'slides/how-it-helps-developer.html'
+                      'slides/index.html'
+                      'slides/intro.html'
+                      'slides/preambule.html'
+                      'slides/questions.html'
+                      'slides/thanks.html'
+                      'slides/use-cases.html'
+                      'index.html'
                     ]
                     verbose: true
                     timestamp: true
