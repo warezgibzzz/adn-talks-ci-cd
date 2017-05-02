@@ -1,0 +1,10 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Right in your face: Why you NEED to use CI/CD",
+    "packageVersion": "0.1.0",
+    "useSass": true,
+    "deployToGithubPages": true,
+    "githubUsername": "warezgibzzz",
+    "githubRepository": "adn-talks-ci-cd"
+  }
+}
