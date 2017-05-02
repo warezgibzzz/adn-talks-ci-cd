@@ -4,6 +4,31 @@ module.exports = (grunt) ->
     grunt.initConfig
         pkg: grunt.file.readJSON 'package.json'
 
+        manifest:
+            generate:
+                options:
+                    basePath: 'dist'
+                    cache: [
+                        'index.html'
+                        'slides/*'
+                        'js/*.js'
+                        'css/*.css'
+                        'resources/**'
+                    ]
+                    verbose: true
+                    timestamp: true
+                    hash: true
+                    network: ['http://*', 'https://*']
+                    master: ['index.html']
+                src: [
+                    'dist/*.html'
+                    'dist/js/*.js'
+                    'dist/css/*.css'
+                    'dist/resources/*.css'
+                    'dist/slides/*'
+                ]
+                dest: 'dist/manifest.appcache'
+
         watch:
 
             livereload:
@@ -32,7 +57,7 @@ module.exports = (grunt) ->
             jshint:
                 files: ['js/*.js']
                 tasks: ['jshint']
-        
+
             sass:
                 files: ['css/source/theme.scss']
                 tasks: ['sass']
@@ -42,7 +67,7 @@ module.exports = (grunt) ->
             theme:
                 files:
                     'css/theme.css': 'css/source/theme.scss'
-        
+
         connect:
 
             livereload:
@@ -89,7 +114,7 @@ module.exports = (grunt) ->
                     filter: 'isFile'
                 }]
 
-        
+
         buildcontrol:
 
             options:
@@ -101,7 +126,7 @@ module.exports = (grunt) ->
                 options:
                     remote: '<%= pkg.repository.url %>'
                     branch: 'gh-pages'
-        
+
 
 
     # Load all grunt tasks.
@@ -143,15 +168,16 @@ module.exports = (grunt) ->
             'sass'
             'buildIndex'
             'copy'
+            'manifest'
         ]
 
-    
+
     grunt.registerTask 'deploy',
         'Deploy to Github Pages', [
             'dist'
             'buildcontrol'
         ]
-    
+
 
     # Define default task.
     grunt.registerTask 'default', [
