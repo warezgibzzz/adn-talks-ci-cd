@@ -19,7 +19,7 @@ module.exports = (grunt) ->
                       'bower_components/reveal.js/plugin/notes/notes.js'
                       'bower_components/reveal.js/css/reveal.css'
                       'bower_components/reveal.js/css/print/paper.css'
-                      'bower_components/highlightjs/styles/solarized_dark.js'
+                      'bower_components/highlightjs/styles/solarized_dark.css'
                       'slides/ci-cd-history.html'
                       'slides/how-bad-that-is-for-developer.html'
                       'slides/how-it-helps-client.html'
